@@ -1,0 +1,261 @@
+2025-09-01 19:18:43,037 - app - INFO - 状态更新: 当前视图: 首页
+2025-09-01 19:18:43,037 - app - INFO - AI投资顾问应用已启动
+2025-09-01 19:18:43,142 - app - INFO - 状态更新: 正在初始化数据...
+2025-09-01 19:18:43,154 - utils.data_fetcher - INFO - 使用模拟数据获取关于 'artificial intelligence' 的新闻
+2025-09-01 19:18:43,154 - utils.data_fetcher - INFO - 为查询 'artificial intelligence' 生成模拟新闻数据
+2025-09-01 19:18:43,159 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:18:43,159 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:18:43,172 - utils.data_fetcher - INFO - 使用模拟数据获取股票 MSFT 的数据
+2025-09-01 19:18:43,172 - utils.data_fetcher - INFO - 为股票 MSFT 生成模拟数据
+2025-09-01 19:18:43,179 - utils.data_fetcher - INFO - 使用模拟数据获取股票 GOOGL 的数据
+2025-09-01 19:18:43,179 - utils.data_fetcher - INFO - 为股票 GOOGL 生成模拟数据
+2025-09-01 19:18:43,186 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AMZN 的数据
+2025-09-01 19:18:43,187 - utils.data_fetcher - INFO - 为股票 AMZN 生成模拟数据
+2025-09-01 19:18:43,194 - utils.data_fetcher - INFO - 使用模拟数据获取股票 META 的数据
+2025-09-01 19:18:43,194 - utils.data_fetcher - INFO - 为股票 META 生成模拟数据
+2025-09-01 19:18:43,200 - utils.data_fetcher - INFO - 使用模拟数据获取股票 TSLA 的数据
+2025-09-01 19:18:43,200 - utils.data_fetcher - INFO - 为股票 TSLA 生成模拟数据
+2025-09-01 19:18:43,207 - utils.data_fetcher - INFO - 使用模拟数据获取股票 NVDA 的数据
+2025-09-01 19:18:43,207 - utils.data_fetcher - INFO - 为股票 NVDA 生成模拟数据
+2025-09-01 19:18:43,213 - utils.data_fetcher - INFO - 使用模拟数据获取股票 PYPL 的数据
+2025-09-01 19:18:43,213 - utils.data_fetcher - INFO - 为股票 PYPL 生成模拟数据
+2025-09-01 19:18:43,221 - utils.data_fetcher - INFO - 使用模拟数据获取股票 INTC 的数据
+2025-09-01 19:18:43,221 - utils.data_fetcher - INFO - 为股票 INTC 生成模拟数据
+2025-09-01 19:18:43,228 - utils.data_fetcher - INFO - 使用模拟数据获取股票 CSCO 的数据
+2025-09-01 19:18:43,229 - utils.data_fetcher - INFO - 为股票 CSCO 生成模拟数据
+2025-09-01 19:18:43,235 - utils.data_fetcher - INFO - 使用模拟数据获取股票 SHA: 688256 的数据
+2025-09-01 19:18:43,235 - utils.data_fetcher - INFO - 为股票 SHA: 688256 生成模拟数据
+2025-09-01 19:18:43,493 - app - INFO - 状态更新: 数据初始化完成
+2025-09-01 19:18:49,189 - app - INFO - 状态更新: 当前视图: 预测结果
+2025-09-01 19:18:50,520 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-01 19:19:03,907 - app - INFO - 状态更新: 当前视图: 预测结果
+2025-09-01 19:19:07,879 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-01 19:19:27,031 - app - INFO - 状态更新: 当前视图: 首页
+2025-09-01 19:19:32,393 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-01 19:19:36,017 - app - INFO - 状态更新: 当前视图: 预测结果
+2025-09-01 19:23:43,038 - app - INFO - 状态更新: 正在刷新数据...
+2025-09-01 19:23:43,040 - utils.data_fetcher - INFO - 使用模拟数据获取关于 'artificial intelligence' 的新闻
+2025-09-01 19:23:43,040 - utils.data_fetcher - INFO - 为查询 'artificial intelligence' 生成模拟新闻数据
+2025-09-01 19:23:43,042 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:23:43,043 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:23:43,072 - utils.data_fetcher - INFO - 使用模拟数据获取股票 MSFT 的数据
+2025-09-01 19:23:43,072 - utils.data_fetcher - INFO - 为股票 MSFT 生成模拟数据
+2025-09-01 19:23:43,100 - utils.data_fetcher - INFO - 使用模拟数据获取股票 GOOGL 的数据
+2025-09-01 19:23:43,100 - utils.data_fetcher - INFO - 为股票 GOOGL 生成模拟数据
+2025-09-01 19:23:43,129 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AMZN 的数据
+2025-09-01 19:23:43,129 - utils.data_fetcher - INFO - 为股票 AMZN 生成模拟数据
+2025-09-01 19:23:43,156 - utils.data_fetcher - INFO - 使用模拟数据获取股票 META 的数据
+2025-09-01 19:23:43,156 - utils.data_fetcher - INFO - 为股票 META 生成模拟数据
+2025-09-01 19:23:43,184 - utils.data_fetcher - INFO - 使用模拟数据获取股票 TSLA 的数据
+2025-09-01 19:23:43,184 - utils.data_fetcher - INFO - 为股票 TSLA 生成模拟数据
+2025-09-01 19:23:43,212 - utils.data_fetcher - INFO - 使用模拟数据获取股票 NVDA 的数据
+2025-09-01 19:23:43,212 - utils.data_fetcher - INFO - 为股票 NVDA 生成模拟数据
+2025-09-01 19:23:43,240 - utils.data_fetcher - INFO - 使用模拟数据获取股票 PYPL 的数据
+2025-09-01 19:23:43,240 - utils.data_fetcher - INFO - 为股票 PYPL 生成模拟数据
+2025-09-01 19:23:43,268 - utils.data_fetcher - INFO - 使用模拟数据获取股票 INTC 的数据
+2025-09-01 19:23:43,268 - utils.data_fetcher - INFO - 为股票 INTC 生成模拟数据
+2025-09-01 19:23:43,295 - utils.data_fetcher - INFO - 使用模拟数据获取股票 CSCO 的数据
+2025-09-01 19:23:43,296 - utils.data_fetcher - INFO - 为股票 CSCO 生成模拟数据
+2025-09-01 19:23:43,323 - utils.data_fetcher - INFO - 使用模拟数据获取股票 SHA: 688256 的数据
+2025-09-01 19:23:43,323 - utils.data_fetcher - INFO - 为股票 SHA: 688256 生成模拟数据
+2025-09-01 19:23:43,351 - app - INFO - 状态更新: 数据刷新完成
+2025-09-01 19:25:19,548 - app - INFO - 状态更新: 当前视图: 首页
+2025-09-01 19:25:19,548 - app - INFO - AI投资顾问应用已启动
+2025-09-01 19:25:19,653 - app - INFO - 状态更新: 正在初始化数据...
+2025-09-01 19:25:19,658 - utils.data_fetcher - INFO - 使用模拟数据获取关于 'artificial intelligence' 的新闻
+2025-09-01 19:25:19,658 - utils.data_fetcher - INFO - 为查询 'artificial intelligence' 生成模拟新闻数据
+2025-09-01 19:25:19,663 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:25:19,663 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:25:19,670 - utils.data_fetcher - INFO - 使用模拟数据获取股票 MSFT 的数据
+2025-09-01 19:25:19,671 - utils.data_fetcher - INFO - 为股票 MSFT 生成模拟数据
+2025-09-01 19:25:19,677 - utils.data_fetcher - INFO - 使用模拟数据获取股票 GOOGL 的数据
+2025-09-01 19:25:19,677 - utils.data_fetcher - INFO - 为股票 GOOGL 生成模拟数据
+2025-09-01 19:25:19,685 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AMZN 的数据
+2025-09-01 19:25:19,685 - utils.data_fetcher - INFO - 为股票 AMZN 生成模拟数据
+2025-09-01 19:25:19,690 - utils.data_fetcher - INFO - 使用模拟数据获取股票 META 的数据
+2025-09-01 19:25:19,691 - utils.data_fetcher - INFO - 为股票 META 生成模拟数据
+2025-09-01 19:25:19,703 - utils.data_fetcher - INFO - 使用模拟数据获取股票 TSLA 的数据
+2025-09-01 19:25:19,703 - utils.data_fetcher - INFO - 为股票 TSLA 生成模拟数据
+2025-09-01 19:25:19,712 - utils.data_fetcher - INFO - 使用模拟数据获取股票 NVDA 的数据
+2025-09-01 19:25:19,712 - utils.data_fetcher - INFO - 为股票 NVDA 生成模拟数据
+2025-09-01 19:25:19,717 - utils.data_fetcher - INFO - 使用模拟数据获取股票 PYPL 的数据
+2025-09-01 19:25:19,717 - utils.data_fetcher - INFO - 为股票 PYPL 生成模拟数据
+2025-09-01 19:25:19,725 - utils.data_fetcher - INFO - 使用模拟数据获取股票 INTC 的数据
+2025-09-01 19:25:19,725 - utils.data_fetcher - INFO - 为股票 INTC 生成模拟数据
+2025-09-01 19:25:19,731 - utils.data_fetcher - INFO - 使用模拟数据获取股票 CSCO 的数据
+2025-09-01 19:25:19,731 - utils.data_fetcher - INFO - 为股票 CSCO 生成模拟数据
+2025-09-01 19:25:19,736 - utils.data_fetcher - INFO - 使用模拟数据获取股票 SHA: 688256 的数据
+2025-09-01 19:25:19,736 - utils.data_fetcher - INFO - 为股票 SHA: 688256 生成模拟数据
+2025-09-01 19:25:19,994 - app - INFO - 状态更新: 数据初始化完成
+2025-09-01 19:25:21,961 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-01 19:25:22,827 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-01 19:25:26,504 - app - INFO - 状态更新: 当前视图: 预测结果
+2025-09-01 19:25:31,329 - app - INFO - 状态更新: 当前视图: 设置
+2025-09-01 19:32:10,894 - app - INFO - 状态更新: 当前视图: 首页
+2025-09-01 19:32:10,895 - app - INFO - AI投资顾问应用已启动
+2025-09-01 19:32:10,997 - app - INFO - 状态更新: 正在初始化数据...
+2025-09-01 19:32:11,003 - utils.data_fetcher - INFO - 使用模拟数据获取关于 'artificial intelligence' 的新闻
+2025-09-01 19:32:11,003 - utils.data_fetcher - INFO - 为查询 'artificial intelligence' 生成模拟新闻数据
+2025-09-01 19:32:11,008 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:32:11,008 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:32:11,024 - utils.data_fetcher - INFO - 使用模拟数据获取股票 MSFT 的数据
+2025-09-01 19:32:11,024 - utils.data_fetcher - INFO - 为股票 MSFT 生成模拟数据
+2025-09-01 19:32:11,031 - utils.data_fetcher - INFO - 使用模拟数据获取股票 GOOGL 的数据
+2025-09-01 19:32:11,031 - utils.data_fetcher - INFO - 为股票 GOOGL 生成模拟数据
+2025-09-01 19:32:11,039 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AMZN 的数据
+2025-09-01 19:32:11,039 - utils.data_fetcher - INFO - 为股票 AMZN 生成模拟数据
+2025-09-01 19:32:11,048 - utils.data_fetcher - INFO - 使用模拟数据获取股票 META 的数据
+2025-09-01 19:32:11,048 - utils.data_fetcher - INFO - 为股票 META 生成模拟数据
+2025-09-01 19:32:11,057 - utils.data_fetcher - INFO - 使用模拟数据获取股票 TSLA 的数据
+2025-09-01 19:32:11,057 - utils.data_fetcher - INFO - 为股票 TSLA 生成模拟数据
+2025-09-01 19:32:11,065 - utils.data_fetcher - INFO - 使用模拟数据获取股票 NVDA 的数据
+2025-09-01 19:32:11,065 - utils.data_fetcher - INFO - 为股票 NVDA 生成模拟数据
+2025-09-01 19:32:11,073 - utils.data_fetcher - INFO - 使用模拟数据获取股票 PYPL 的数据
+2025-09-01 19:32:11,073 - utils.data_fetcher - INFO - 为股票 PYPL 生成模拟数据
+2025-09-01 19:32:11,079 - utils.data_fetcher - INFO - 使用模拟数据获取股票 INTC 的数据
+2025-09-01 19:32:11,079 - utils.data_fetcher - INFO - 为股票 INTC 生成模拟数据
+2025-09-01 19:32:11,088 - utils.data_fetcher - INFO - 使用模拟数据获取股票 CSCO 的数据
+2025-09-01 19:32:11,088 - utils.data_fetcher - INFO - 为股票 CSCO 生成模拟数据
+2025-09-01 19:32:11,094 - utils.data_fetcher - INFO - 使用模拟数据获取股票 SHA: 688256 的数据
+2025-09-01 19:32:11,094 - utils.data_fetcher - INFO - 为股票 SHA: 688256 生成模拟数据
+2025-09-01 19:32:11,353 - app - INFO - 状态更新: 数据初始化完成
+2025-09-01 19:32:12,719 - app - INFO - 状态更新: 正在获取 AAPL 的数据...
+2025-09-01 19:32:12,724 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:32:12,724 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:32:12,737 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的基本面数据
+2025-09-01 19:32:12,737 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟基本面数据
+2025-09-01 19:32:14,060 - app - INFO - 状态更新: 数据更新失败
+2025-09-01 19:32:15,457 - app - ERROR - 错误: 更新错误 - 更新 AAPL 数据时出错: 'Date'
+2025-09-01 19:32:15,458 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-01 19:32:16,780 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-01 19:32:26,282 - app - INFO - 状态更新: 正在获取 AAPL 的数据...
+2025-09-01 19:32:26,282 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:32:26,282 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:32:26,290 - utils.data_processor - ERROR - 处理股票数据时出错: index 14 is out of bounds for axis 0 with size 8
+2025-09-01 19:32:26,290 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的基本面数据
+2025-09-01 19:32:26,290 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟基本面数据
+2025-09-01 19:32:26,474 - app - INFO - 状态更新: 数据更新失败
+2025-09-01 19:32:29,225 - app - ERROR - 错误: 更新错误 - 更新 AAPL 数据时出错: 'Date'
+2025-09-01 19:32:33,697 - app - INFO - 状态更新: 正在更新 AAPL 的预测数据...
+2025-09-01 19:32:33,705 - app - INFO - 状态更新: AAPL 预测数据已更新
+2025-09-01 19:32:33,705 - app - INFO - 状态更新: 当前视图: 预测结果
+2025-09-01 19:32:36,297 - app - INFO - 状态更新: 正在为 AAPL 训练模型...
+2025-09-01 19:32:37,280 - utils.prediction_model - INFO - 成功构建LSTM模型
+2025-09-01 19:33:02,936 - utils.prediction_model - INFO - 模型训练完成
+2025-09-01 19:33:04,010 - utils.prediction_model - INFO - 模型评估结果: MSE=790.9884, RMSE=28.1245, MAE=21.5138, R2=0.9349, MAPE=3.5006%
+2025-09-01 19:33:04,058 - app - INFO - 状态更新: AAPL 模型训练完成
+2025-09-01 19:33:36,222 - app - INFO - 状态更新: 正在预测 AAPL 的未来价格...
+2025-09-01 19:33:37,894 - app - INFO - 状态更新: AAPL 未来预测完成
+2025-09-01 19:33:48,283 - app - INFO - 状态更新: 当前视图: 预测结果
+2025-09-01 19:33:51,434 - app - INFO - 状态更新: 当前视图: 设置
+2025-09-01 19:37:10,895 - app - INFO - 状态更新: 正在刷新数据...
+2025-09-01 19:37:10,897 - utils.data_fetcher - INFO - 使用模拟数据获取关于 'artificial intelligence' 的新闻
+2025-09-01 19:37:10,897 - utils.data_fetcher - INFO - 为查询 'artificial intelligence' 生成模拟新闻数据
+2025-09-01 19:37:10,900 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:37:10,900 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:37:10,929 - utils.data_fetcher - INFO - 使用模拟数据获取股票 MSFT 的数据
+2025-09-01 19:37:10,929 - utils.data_fetcher - INFO - 为股票 MSFT 生成模拟数据
+2025-09-01 19:37:10,956 - utils.data_fetcher - INFO - 使用模拟数据获取股票 GOOGL 的数据
+2025-09-01 19:37:10,956 - utils.data_fetcher - INFO - 为股票 GOOGL 生成模拟数据
+2025-09-01 19:37:10,983 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AMZN 的数据
+2025-09-01 19:37:10,983 - utils.data_fetcher - INFO - 为股票 AMZN 生成模拟数据
+2025-09-01 19:37:11,009 - utils.data_fetcher - INFO - 使用模拟数据获取股票 META 的数据
+2025-09-01 19:37:11,009 - utils.data_fetcher - INFO - 为股票 META 生成模拟数据
+2025-09-01 19:37:11,036 - utils.data_fetcher - INFO - 使用模拟数据获取股票 TSLA 的数据
+2025-09-01 19:37:11,036 - utils.data_fetcher - INFO - 为股票 TSLA 生成模拟数据
+2025-09-01 19:37:11,166 - utils.data_fetcher - INFO - 使用模拟数据获取股票 NVDA 的数据
+2025-09-01 19:37:11,166 - utils.data_fetcher - INFO - 为股票 NVDA 生成模拟数据
+2025-09-01 19:37:11,193 - utils.data_fetcher - INFO - 使用模拟数据获取股票 PYPL 的数据
+2025-09-01 19:37:11,193 - utils.data_fetcher - INFO - 为股票 PYPL 生成模拟数据
+2025-09-01 19:37:11,219 - utils.data_fetcher - INFO - 使用模拟数据获取股票 INTC 的数据
+2025-09-01 19:37:11,219 - utils.data_fetcher - INFO - 为股票 INTC 生成模拟数据
+2025-09-01 19:37:11,245 - utils.data_fetcher - INFO - 使用模拟数据获取股票 CSCO 的数据
+2025-09-01 19:37:11,246 - utils.data_fetcher - INFO - 为股票 CSCO 生成模拟数据
+2025-09-01 19:37:11,272 - utils.data_fetcher - INFO - 使用模拟数据获取股票 SHA: 688256 的数据
+2025-09-01 19:37:11,272 - utils.data_fetcher - INFO - 为股票 SHA: 688256 生成模拟数据
+2025-09-01 19:37:11,300 - app - INFO - 状态更新: 正在获取 AAPL 的数据...
+2025-09-01 19:37:11,300 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:37:11,300 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:37:11,307 - utils.data_processor - ERROR - 处理股票数据时出错: index 14 is out of bounds for axis 0 with size 8
+2025-09-01 19:37:11,307 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的基本面数据
+2025-09-01 19:37:11,307 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟基本面数据
+2025-09-01 19:37:11,485 - app - INFO - 状态更新: 数据更新失败
+2025-09-01 19:37:45,309 - app - ERROR - 错误: 更新错误 - 更新 AAPL 数据时出错: 'Date'
+2025-09-01 19:37:45,310 - app - INFO - 状态更新: 正在更新 AAPL 的预测数据...
+2025-09-01 19:37:45,398 - utils.prediction_model - INFO - 模型评估结果: MSE=790.9884, RMSE=28.1245, MAE=21.5138, R2=0.9349, MAPE=3.5006%
+2025-09-01 19:37:46,489 - app - INFO - 状态更新: AAPL 预测数据已更新
+2025-09-01 19:37:46,490 - app - INFO - 状态更新: 数据刷新完成
+2025-09-01 19:41:43,725 - app - INFO - 状态更新: 当前视图: 设置
+2025-09-01 19:42:51,530 - app - INFO - 状态更新: 当前视图: 首页
+2025-09-01 19:42:51,531 - app - INFO - AI投资顾问应用已启动
+2025-09-01 19:42:51,636 - app - INFO - 状态更新: 正在初始化数据...
+2025-09-01 19:42:51,649 - utils.data_fetcher - INFO - 使用模拟数据获取关于 'artificial intelligence' 的新闻
+2025-09-01 19:42:51,649 - utils.data_fetcher - INFO - 为查询 'artificial intelligence' 生成模拟新闻数据
+2025-09-01 19:42:51,652 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:42:51,652 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:42:51,660 - utils.data_fetcher - INFO - 使用模拟数据获取股票 MSFT 的数据
+2025-09-01 19:42:51,660 - utils.data_fetcher - INFO - 为股票 MSFT 生成模拟数据
+2025-09-01 19:42:51,668 - utils.data_fetcher - INFO - 使用模拟数据获取股票 GOOGL 的数据
+2025-09-01 19:42:51,668 - utils.data_fetcher - INFO - 为股票 GOOGL 生成模拟数据
+2025-09-01 19:42:51,674 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AMZN 的数据
+2025-09-01 19:42:51,674 - utils.data_fetcher - INFO - 为股票 AMZN 生成模拟数据
+2025-09-01 19:42:51,679 - utils.data_fetcher - INFO - 使用模拟数据获取股票 META 的数据
+2025-09-01 19:42:51,679 - utils.data_fetcher - INFO - 为股票 META 生成模拟数据
+2025-09-01 19:42:51,687 - utils.data_fetcher - INFO - 使用模拟数据获取股票 TSLA 的数据
+2025-09-01 19:42:51,687 - utils.data_fetcher - INFO - 为股票 TSLA 生成模拟数据
+2025-09-01 19:42:51,694 - utils.data_fetcher - INFO - 使用模拟数据获取股票 NVDA 的数据
+2025-09-01 19:42:51,694 - utils.data_fetcher - INFO - 为股票 NVDA 生成模拟数据
+2025-09-01 19:42:51,700 - utils.data_fetcher - INFO - 使用模拟数据获取股票 PYPL 的数据
+2025-09-01 19:42:51,700 - utils.data_fetcher - INFO - 为股票 PYPL 生成模拟数据
+2025-09-01 19:42:51,707 - utils.data_fetcher - INFO - 使用模拟数据获取股票 INTC 的数据
+2025-09-01 19:42:51,707 - utils.data_fetcher - INFO - 为股票 INTC 生成模拟数据
+2025-09-01 19:42:51,713 - utils.data_fetcher - INFO - 使用模拟数据获取股票 CSCO 的数据
+2025-09-01 19:42:51,713 - utils.data_fetcher - INFO - 为股票 CSCO 生成模拟数据
+2025-09-01 19:42:51,720 - utils.data_fetcher - INFO - 使用模拟数据获取股票 SHA: 688256 的数据
+2025-09-01 19:42:51,720 - utils.data_fetcher - INFO - 为股票 SHA: 688256 生成模拟数据
+2025-09-01 19:42:51,968 - app - INFO - 状态更新: 数据初始化完成
+2025-09-01 19:42:55,203 - app - INFO - 状态更新: 正在获取 AAPL 的数据...
+2025-09-01 19:42:55,206 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:42:55,206 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:42:55,218 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的基本面数据
+2025-09-01 19:42:55,218 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟基本面数据
+2025-09-01 19:42:56,487 - app - INFO - 状态更新: 数据更新失败
+2025-09-01 19:42:57,689 - app - ERROR - 错误: 更新错误 - 更新 AAPL 数据时出错: 'Date'
+2025-09-01 19:42:57,689 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-01 19:43:00,073 - app - INFO - 状态更新: 当前视图: 设置
+2025-09-01 19:46:11,494 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-01 19:47:51,533 - app - INFO - 状态更新: 正在刷新数据...
+2025-09-01 19:47:51,536 - utils.data_fetcher - INFO - 使用模拟数据获取关于 'artificial intelligence' 的新闻
+2025-09-01 19:47:51,536 - utils.data_fetcher - INFO - 为查询 'artificial intelligence' 生成模拟新闻数据
+2025-09-01 19:47:51,539 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:47:51,539 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:47:51,574 - utils.data_fetcher - INFO - 使用模拟数据获取股票 MSFT 的数据
+2025-09-01 19:47:51,574 - utils.data_fetcher - INFO - 为股票 MSFT 生成模拟数据
+2025-09-01 19:47:51,603 - utils.data_fetcher - INFO - 使用模拟数据获取股票 GOOGL 的数据
+2025-09-01 19:47:51,603 - utils.data_fetcher - INFO - 为股票 GOOGL 生成模拟数据
+2025-09-01 19:47:51,632 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AMZN 的数据
+2025-09-01 19:47:51,632 - utils.data_fetcher - INFO - 为股票 AMZN 生成模拟数据
+2025-09-01 19:47:51,660 - utils.data_fetcher - INFO - 使用模拟数据获取股票 META 的数据
+2025-09-01 19:47:51,660 - utils.data_fetcher - INFO - 为股票 META 生成模拟数据
+2025-09-01 19:47:51,687 - utils.data_fetcher - INFO - 使用模拟数据获取股票 TSLA 的数据
+2025-09-01 19:47:51,687 - utils.data_fetcher - INFO - 为股票 TSLA 生成模拟数据
+2025-09-01 19:47:51,714 - utils.data_fetcher - INFO - 使用模拟数据获取股票 NVDA 的数据
+2025-09-01 19:47:51,714 - utils.data_fetcher - INFO - 为股票 NVDA 生成模拟数据
+2025-09-01 19:47:51,741 - utils.data_fetcher - INFO - 使用模拟数据获取股票 PYPL 的数据
+2025-09-01 19:47:51,741 - utils.data_fetcher - INFO - 为股票 PYPL 生成模拟数据
+2025-09-01 19:47:51,768 - utils.data_fetcher - INFO - 使用模拟数据获取股票 INTC 的数据
+2025-09-01 19:47:51,768 - utils.data_fetcher - INFO - 为股票 INTC 生成模拟数据
+2025-09-01 19:47:51,794 - utils.data_fetcher - INFO - 使用模拟数据获取股票 CSCO 的数据
+2025-09-01 19:47:51,794 - utils.data_fetcher - INFO - 为股票 CSCO 生成模拟数据
+2025-09-01 19:47:51,820 - utils.data_fetcher - INFO - 使用模拟数据获取股票 SHA: 688256 的数据
+2025-09-01 19:47:51,820 - utils.data_fetcher - INFO - 为股票 SHA: 688256 生成模拟数据
+2025-09-01 19:47:51,847 - app - INFO - 状态更新: 正在获取 AAPL 的数据...
+2025-09-01 19:47:51,847 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的数据
+2025-09-01 19:47:51,847 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟数据
+2025-09-01 19:47:51,858 - utils.data_fetcher - INFO - 使用模拟数据获取股票 AAPL 的基本面数据
+2025-09-01 19:47:51,858 - utils.data_fetcher - INFO - 为股票 AAPL 生成模拟基本面数据
+2025-09-01 19:47:53,127 - app - INFO - 状态更新: 数据更新失败
+2025-09-02 10:42:30,457 - app - ERROR - 错误: 更新错误 - 更新 AAPL 数据时出错: 'Date'
+2025-09-02 10:42:30,460 - app - INFO - 状态更新: 数据刷新完成
+2025-09-02 10:42:31,773 - app - INFO - 状态更新: 当前视图: 股票分析
+2025-09-02 10:42:35,838 - app - INFO - AI投资顾问应用已关闭

@@ -242,9 +242,13 @@ class PredictionView(ttk.Frame):
     def update_stock_list(self, stock_symbols):
         """更新股票列表"""
         self.stock_dropdown['values'] = stock_symbols
-        if stock_symbols and not self.stock_var.get():
-            self.stock_var.set(stock_symbols[0])
-            self.current_symbol = stock_symbols[0]
+        if stock_symbols:
+            # 如果还没选择过，就默认选第一个
+            if not self.stock_var.get():
+                self.stock_var.set(stock_symbols[0])
+                self.current_symbol = stock_symbols[0]
+            # ★ 列表到位后立刻更新一次界面（表格/图表可能仍为空，但不再是“无数据可用”）
+            self.update_prediction_data()
 
     def on_stock_selected(self, event):
         """股票选择事件处理"""

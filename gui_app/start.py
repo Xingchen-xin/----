@@ -18,20 +18,31 @@ sys.path.insert(0, current_dir)
 
 def check_dependencies():
     """检查依赖包是否安装"""
-    required_packages = [
-        'numpy', 'pandas', 'matplotlib', 'seaborn',
-        'scikit-learn', 'tensorflow', 'yfinance',
-        'requests', 'beautifulsoup4', 'textblob',
-        'nltk', 'ta', 'tqdm', 'Pillow', 'ttkthemes'
-    ]
+    required_packages = {
+        'numpy': 'numpy',
+        'pandas': 'pandas',
+        'matplotlib': 'matplotlib',
+        'seaborn': 'seaborn',
+        'scikit-learn': 'sklearn',         # ← 关键
+        'tensorflow': 'tensorflow',
+        'yfinance': 'yfinance',
+        'requests': 'requests',
+        'beautifulsoup4': 'bs4',           # ← 关键
+        'textblob': 'textblob',
+        'nltk': 'nltk',
+        'ta': 'ta',
+        'tqdm': 'tqdm',
+        'Pillow': 'PIL',                   # ← 关键
+        'ttkthemes': 'ttkthemes',
+    }
 
     missing_packages = []
 
-    for package in required_packages:
+    for pip_name, import_name in required_packages.items():
         try:
-            __import__(package)
+            __import__(import_name)
         except ImportError:
-            missing_packages.append(package)
+            missing_packages.append(pip_name)
 
     if missing_packages:
         messagebox.showerror(

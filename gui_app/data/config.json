@@ -1,0 +1,69 @@
+{
+    "api_keys": {
+        "news_api": "e8a4491450674e77931a96793bd48007",
+        "alpha_vantage": "KH55C5YE323H6BP7",
+        "quandl": "z_S6E-8M3gsau58FqxtU"
+    },
+    "stock_symbols": [
+        "AAPL",
+        "MSFT",
+        "GOOGL",
+        "AMZN",
+        "META",
+        "TSLA",
+        "NVDA",
+        "PYPL",
+        "INTC",
+        "CSCO",
+        "SHA: 688256"
+    ],
+    "news_sources": [
+        "TechCrunch",
+        "Reuters",
+        "Bloomberg",
+        "WSJ",
+        "CNBC",
+        "Forbes",
+        "The Verge",
+        "Wired",
+        "TechRadar",
+        "CNET"
+    ],
+    "news_query": "artificial intelligence",
+    "data_settings": {
+        "use_mock_data": true,
+        "historical_data_years": 5,
+        "max_news_articles": 100
+    },
+    "model_parameters": {
+        "prediction_days": 30,
+        "lstm_units": 50,
+        "dropout_rate": 0.2,
+        "epochs": 50,
+        "batch_size": 32,
+        "train_test_split": 0.8
+    },
+    "visualization": {
+        "figure_size": [
+            12,
+            8
+        ],
+        "color_palette": "viridis",
+        "save_plots": true,
+        "plot_format": "png",
+        "plot_dpi": 300
+    },
+    "ui_settings": {
+        "theme": "arc",
+        "host": "127.0.0.1",
+        "port": 8050,
+        "debug": false
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/ai_investment_advisor.log",
+        "max_size": "10MB",
+        "backup_count": 5
+    },
+    "refresh_interval": 300
+}

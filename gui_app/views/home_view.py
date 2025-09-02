@@ -1,5 +1,8 @@
+import tkinter as tk
+from tkinter import ttk
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+from matplotlib import font_manager
 import seaborn as sns
 import pandas as pd
 import numpy as np
@@ -10,6 +13,12 @@ from datetime import datetime, timedelta
 
 class Visualizer:
     def __init__(self, config):
+        if not isinstance(config, dict):
+            logging.getLogger(__name__).warning(
+                "Visualizer 收到的 config 不是 dict，将使用默认配置"
+            )
+            config = {}
+        self.config = config
         """初始化可视化工具"""
         self.config = config
         self.figure_size = config.get(
@@ -22,18 +31,44 @@ class Visualizer:
             'visualization', {}).get('plot_format', 'png')
         self.plot_dpi = config.get('visualization', {}).get('plot_dpi', 300)
 
-        # 设置中文字体
-        plt.rcParams['font.sans-serif'] = ['WenQuanYi Zen Hei']
+        # 设置中文字体（在 macOS 上优先使用系统可用字体）
+        cn_font_candidates = [
+            'PingFang SC',        # macOS 系统中文字体
+            'Hiragino Sans GB',   # macOS/日文环境常见
+            'Heiti SC', 'STHeiti',
+            'Noto Sans CJK SC',   # Google 思源黑体
+            'Source Han Sans SC',
+            'WenQuanYi Zen Hei'   # Linux 常见
+        ]
+        available = set(f.name for f in font_manager.fontManager.ttflist)
+        chosen = None
+        for name in cn_font_candidates:
+            if name in available:
+                chosen = name
+                break
+        # 如果没有中文字体可用，chosen 仍为 None，matplotlib 会回退到默认字体
+        if chosen:
+            plt.rcParams['font.sans-serif'] = [chosen]
+            sns.set(style='whitegrid', font=chosen,
+                    rc={'axes.unicode_minus': False})
+        else:
+            sns.set(style='whitegrid', rc={'axes.unicode_minus': False})
         plt.rcParams['axes.unicode_minus'] = False
-        sns.set(style='whitegrid', font='WenQuanYi Zen Hei',
-                rc={'axes.unicode_minus': False})
 
-        # 设置日志
+        # 日志器与输出目录
         self.logger = logging.getLogger(__name__)
-
-        # 确保图像目录存在
-        os.makedirs(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(
-            os.path.abspath(__file__)))), 'static', 'images'), exist_ok=True)
+        # 确保图像目录存在（.../static/images）
+        images_dir = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+            'static', 'images'
+        )
+        os.makedirs(images_dir, exist_ok=True)
+    def _setup_date_axis(self, ax):
+        """让日期轴更智能：使用自动 locator 和简洁 formatter。"""
+        locator = mdates.AutoDateLocator(minticks=5, maxticks=8)
+        formatter = mdates.ConciseDateFormatter(locator)
+        ax.xaxis.set_major_locator(locator)
+        ax.xaxis.set_major_formatter(formatter)
 
     def plot_stock_data(self, data, symbol, save_path=None, show_volume=True, show_indicators=True):
         """绘制股票数据图表"""
@@ -43,11 +78,12 @@ class Visualizer:
 
         try:
             # 创建图表
-            fig, axes = plt.subplots(4, 1, figsize=self.figure_size,
+            fig, axes = plt.subplots(4, 1, figsize=self.figure_size, sharex=True,
                                      gridspec_kw={'height_ratios': [3, 1, 1, 1]})
 
             # 绘制K线图
             self._plot_candlestick(axes[0], data)
+            self._setup_date_axis(axes[0])
 
             # 添加移动平均线
             if show_indicators and 'MA20' in data.columns:
@@ -76,14 +112,21 @@ class Visualizer:
             # 绘制成交量
             if show_volume:
                 self._plot_volume(axes[1], data)
+                self._setup_date_axis(axes[1])
 
             # 绘制RSI
             if show_indicators and 'RSI' in data.columns:
                 self._plot_rsi(axes[2], data)
+                self._setup_date_axis(axes[2])
 
             # 绘制MACD
             if show_indicators and all(col in data.columns for col in ['MACD', 'MACD_signal', 'MACD_hist']):
                 self._plot_macd(axes[3], data)
+                self._setup_date_axis(axes[3])
+
+            # 只保留最底部子图的 x 轴刻度标签
+            for ax in axes[:-1]:
+                ax.label_outer()
 
             # 调整布局
             plt.tight_layout()
@@ -128,11 +171,6 @@ class Visualizer:
         ax.bar(down.index, down['Low'] - down['Close'],
                bottom=down['Close'], width=0.1, color=down_color)
 
-        # 设置x轴格式
-        ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-        ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=mdates.MO))
-        plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
-
         # 设置y轴标签
         ax.set_ylabel('价格')
 
@@ -150,11 +188,6 @@ class Visualizer:
         ax.bar(up.index, up['Volume'], color=up_color, alpha=0.5)
         ax.bar(down.index, down['Volume'], color=down_color, alpha=0.5)
 
-        # 设置x轴格式
-        ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-        ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=mdates.MO))
-        plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
-
         # 设置y轴标签
         ax.set_ylabel('成交量')
 
@@ -166,11 +199,6 @@ class Visualizer:
         # 添加超买超卖线
         ax.axhline(70, color='red', linestyle='--', alpha=0.5)
         ax.axhline(30, color='green', linestyle='--', alpha=0.5)
-
-        # 设置x轴格式
-        ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-        ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=mdates.MO))
-        plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
 
         # 设置y轴标签和范围
         ax.set_ylabel('RSI')
@@ -189,11 +217,6 @@ class Visualizer:
 
         # 添加零线
         ax.axhline(0, color='black', linestyle='-', alpha=0.3)
-
-        # 设置x轴格式
-        ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-        ax.xaxis.set_major_locator(mdates.WeekdayLocator(byweekday=mdates.MO))
-        plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
 
         # 设置y轴标签
         ax.set_ylabel('MACD')
@@ -332,11 +355,8 @@ class Visualizer:
             axes[0].set_title('新闻情感得分时间序列')
             axes[0].legend(loc='upper left')
 
-            # 设置x轴格式
-            axes[0].xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-            axes[0].xaxis.set_major_locator(
-                mdates.WeekdayLocator(byweekday=mdates.MO))
-            plt.setp(axes[0].get_xticklabels(), rotation=45, ha='right')
+            # 设置日期轴格式
+            self._setup_date_axis(axes[0])
 
             # 设置y轴标签
             axes[0].set_ylabel('情感得分')
@@ -485,10 +505,9 @@ class Visualizer:
 
             # 设置x轴格式
             for ax in axes:
-                ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
-                ax.xaxis.set_major_locator(
-                    mdates.WeekdayLocator(byweekday=mdates.MO))
-                plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
+                self._setup_date_axis(ax)
+            for ax in axes[:-1]:
+                ax.label_outer()
 
             # 调整布局
             plt.tight_layout()
@@ -572,3 +591,68 @@ class Visualizer:
         except Exception as e:
             self.logger.error(f"绘制技术信号图表时出错: {str(e)}")
             return None
+class HomeView(tk.Frame):
+    """首页视图：继承自 tk.Frame，支持 pack/grid/place，并委托可视化给 Visualizer"""
+    def __init__(self, parent, app_or_config=None):
+        # 兼容两种传参：HomeView(parent, app) 或 HomeView(parent, config_dict)
+        super().__init__(parent)
+        if isinstance(app_or_config, dict) or app_or_config is None:
+            config = app_or_config or {}
+            self.app = None
+        else:
+            self.app = app_or_config
+            config = getattr(self.app, 'config', {})
+
+        # 内部可视化器
+        self._viz = Visualizer(config)
+
+        # 基本 UI 占位（避免空白导致布局问题）
+        self._header = ttk.Label(self, text="首页", font=("Arial", 14, "bold"))
+        self._header.pack(anchor="w", padx=10, pady=10)
+
+        # 使用说明
+        help_text = (
+            "使用提示：\n"
+            "1) 左侧选择 ‘股票分析’ 进入主功能界面。\n"
+            "2) 顶部输入股票代码或从下拉框选择，然后点 ‘搜索/刷新’。\n"
+            "3) 如弹出 ‘Date’ 相关错误，请确保数据中有日期索引：\n"
+            "   例如在数据抓取后执行 data.index = pd.to_datetime(data.index); data.index.name = 'Date'。\n"
+            "4) 首次运行会自动下载并处理配置里的股票列表，稍等几秒即可。"
+        )
+        self._help = ttk.Label(self, text=help_text, justify="left")
+        self._help.pack(anchor="w", padx=10, pady=(0,10))
+
+        # 数据占位
+        self._stock_data = {}
+        self._news_data = []
+
+    # 供 app.py 调用，用于注入数据
+    def update_data(self, stock_data, news_data):
+        self._stock_data = stock_data or {}
+        self._news_data = news_data or []
+        # 这里可以根据需要刷新界面；先简单更新标题中的数量信息
+        try:
+            stocks_cnt = len(self._stock_data) if isinstance(self._stock_data, dict) else 0
+            news_cnt = len(self._news_data) if isinstance(self._news_data, (list, tuple)) else 0
+            self._header.config(text=f"首页（股票: {stocks_cnt}，新闻: {news_cnt}）")
+        except Exception:
+            pass
+
+    # 以下方法保持向后兼容：对外暴露与旧版一致的绘图 API
+    def plot_stock_data(self, *args, **kwargs):
+        return self._viz.plot_stock_data(*args, **kwargs)
+
+    def plot_prediction_results(self, *args, **kwargs):
+        return self._viz.plot_prediction_results(*args, **kwargs)
+
+    def plot_future_predictions(self, *args, **kwargs):
+        return self._viz.plot_future_predictions(*args, **kwargs)
+
+    def plot_news_sentiment(self, *args, **kwargs):
+        return self._viz.plot_news_sentiment(*args, **kwargs)
+
+    def plot_stock_news_correlation(self, *args, **kwargs):
+        return self._viz.plot_stock_news_correlation(*args, **kwargs)
+
+    def plot_technical_signals(self, *args, **kwargs):
+        return self._viz.plot_technical_signals(*args, **kwargs)
